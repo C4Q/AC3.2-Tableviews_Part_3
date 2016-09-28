@@ -208,4 +208,4 @@ To acheive that goal, here are a few pointers:
 #### Other Optional Exercises
 1. Update the title of the `UINavigationController` of `MovieDetailViewController` to have the name of the `Movie` being viewed
 2. Same as the above, but for the `MovieCastDetailViewController`
-3. You may have noticed that some of the labels get hidden when viewing the project on an iPhone 5s. Swap the `summaryText` `UILabel` with a `UITextField` to allow for this portion of the text to be scrollable.
+3. You may have noticed that some of the labels get hidden when viewing the project on an iPhone 5s. Swap the `summaryText` `UILabel` with a `UITextView` to allow for this portion of the text to be scrollable. Then under “behavior” in attributes, uncheck both Editable and Selectable.
