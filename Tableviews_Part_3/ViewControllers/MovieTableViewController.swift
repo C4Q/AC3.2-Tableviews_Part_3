@@ -149,18 +149,12 @@ class MovieTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        // 1. check sender for the cell that was tapped
+        // 1. check if tapped
         if let tappedMovieCell: MovieTableViewCell = sender as? MovieTableViewCell {
-            
             // 2. check for the right storyboard segue
-
-            if segue.identifier == "MovieDetailSegue" {
-                
+            if segue.identifier == "MovieDetailViewSegue" {
                 // 3. get reference to the destination view controller
                 let movieDetailViewController: MovieDetailViewController = segue.destination as! MovieDetailViewController
                 
@@ -177,22 +171,14 @@ class MovieTableViewController: UITableViewController {
                 let selectedMovie: Movie = data[cellIndexPath.row]
                 movieDetailViewController.selectedMovie = selectedMovie
             }
-            
             if segue.identifier == "MovieCastDetailSegue" {
-                
-                // 3. get reference to the destination view controller
                 let movieCastDetailViewController: MovieCastDetailViewController = segue.destination as! MovieCastDetailViewController
-                
-                // 4. get our cell's indexPath
                 let cellIndexPath: IndexPath = self.tableView.indexPath(for: tappedMovieCell)!
-                
-                // 5. get our cell's Movie
-                guard let genre = Genre.init(rawValue: cellIndexPath.section),
+                guard let genre = Genre(rawValue: cellIndexPath.section),
                     let data = byGenre(genre) else {
                         return
                 }
                 
-                // 6. set the destionation's selectedMovie property
                 let selectedMovie: Movie = data[cellIndexPath.row]
                 movieCastDetailViewController.selectedMovie = selectedMovie
             }
