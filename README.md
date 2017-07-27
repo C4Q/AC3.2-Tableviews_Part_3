@@ -14,7 +14,7 @@
 1. [Extensions - Apple Doc](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html)
 
 ---
-###Vocabulary
+### Vocabulary
 
 1. `titleForHeader` - shorthand for `tableView(_:,titleForHeaderInSection:)`
 2. **Enumeration** - An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code. ([Apple](https://itun.es/us/jEUH0.l))
@@ -80,13 +80,13 @@ self.title ="Movies"
 This is fairly straightforward, with the trickiest part being sizing the image you're going to use to fit your navBar properly. In this case, the project includes an icon that's already sized at about 60pt for its @2x size. This is going to be purely for asthetics, but know that this `UIBarButtonItem` can function as a regular `UIButton` object, it just specifically goes into a `UINavigationContoller`
 
 1. Search for a `UIBarButtonItem` object in Xcode and drag it into the navigation bar in story board
-	- <img src="./Images/bar_button_item_ui.png">
+	- <img src="./Images/bar_button_item_ui.png" width="400" alt="Location a bar button item">
 2. Select the new `UIBarButtonItem` and set it to be the `reel` image. And that's all there is to it!
-	- <img src="./Images/bar_button_image_select.png">
+	- <img src="./Images/bar_button_image_select.png" width="500" alt="Updating image of button">
 
 Run the project at this point and take a peek at how much better things look already!
 
-<img src="./Images/reel_good_styled_nav.png" width="400">
+<img src="./Images/reel_good_styled_nav.png" width="400" alt="Stylized Nav Bar">
 
 ---
 
