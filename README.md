@@ -29,8 +29,8 @@ Since we know that Reel Good is going to want to use their official brand colors
 
 ```swift
 // you can add this code somewhere at the top of UIMovieViewController
-  let reelGoodGreen: UIColor = UIColor(red: 109.0/255.0, green: 199.0/255.0, blue: 39.0/255.0, alpha: 1.0)
-  let reelGoodGray: UIColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1.0)
+let reelGoodGreen: UIColor = UIColor(red: 109.0/255.0, green: 199.0/255.0, blue: 39.0/255.0, alpha: 1.0)
+let reelGoodGray: UIColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1.0)
 ```
 
 That is what the code looks like to define the exact color of green and gray that appears in Reel Good's logo. Seems reasonable that we can just copy/past that line into each class we need, or put it someone once and give it the `public` access modifier to be available everywhere in our project.
@@ -103,7 +103,7 @@ override func tableView(_ tableView: UITableView, titleForHeaderInSection sectio
 
 Adding the above will result in displaying a single section header with the title "All Movies". This header floats above the cells of the section it is in:
 
->>> Image
+<img src="./Images/all_movies_section_header.png" width="400" alt="Single section header, All Movies">
 
 We could alter this slightly for different effects, for example, to have a section header for each cell
 
@@ -125,7 +125,8 @@ override func tableView(_ tableView: UITableView, titleForHeaderInSection sectio
 	}
 }
 ```
->>> Image
+
+<img src="./Images/alternating_section_headers.png" width="400" alt="Section per movie">
 
 #### Exercise
 
@@ -145,7 +146,7 @@ We're going to want to make it obvious to our users that Movies are being sorted
 	```
 3. You will need to update `cellForRow`, `numberOfRows`, `numberOfSections` and `titleForHeader` to take into account the multiple sections and the varying number of cells in each section. `if-else` conditionals can get you what you need in most cases.
 
->>> Image
+<img src="./Images/genre_section_headers.png" width="400" alt="Section by genre">
 
 <br>
 <details><summary>Hint 1</summary>
@@ -163,21 +164,18 @@ You're going to want to use the <code>filter</code> function on <code>self.movie
 While Reel Good's Lead Designer loved that you were able to match their specs exactly, they're not entirely sure they love their original design and want you to make two more types of cells that they can test. They've sent over some screenshots of their design mock ups and have asked you to recreate:
 
 #### Alternative Version 1
-![Alt Version 1 Mock Up 1](http://i.imgur.com/XTnGrLu.png)
-![Alt Version 1 Portrait](http://i.imgur.com/AgvvzGl.png)
-![Alt Version 1 Landscape](http://i.imgur.com/uUV354P.png)
+<img src="./Images/alt_version_1_storyboard.png" width="400" alt="Alt Version 1 Mock Up 1">
+<img src="./Images/alt_version_1_simulator.png" width="400" alt="Alt Version 1 Portrait">
+
 ---
 
 ### Alternative Version 2
-![Alt Version 2 Mock Up](http://i.imgur.com/BZOfhzE.png)
-![Alt Version 2 Portrait](http://i.imgur.com/4CaspGo.png)
-![Alt Version 2 Landscape](http://i.imgur.com/GresiSK.png)
+<img src="./Images/alt_version_2_storyboard.png" width="400" alt=Alt Version 2 Mock Up"">
+<img src="./Images/alt_version_2_simulator.png" width="400" alt="Alt Version 2 Portrait">
 
-What's worse, is that they expect ALL of these designs to look good in landscape and protrait, so you're going to need to make sure your constraints are very well engineered and that the app supports landscape (left and right) and portrait.
+#### (Optional, but fun) Adding in new fonts!
 
-#### Adding in new fonts!
-
->>>TODO: link fonts exercise from part ii
+If you haven't already done so, take a look at part 2's [Extra Adding Custom Fonts](https://github.com/C4Q/AC3.2-Tableviews_Part_2#5-extra-adding-custom-fonts). It's a good exercise in getting used to the `xcodeproj` in general and it'll give your project a little more visual flair
 
 #### Advanced:
 
