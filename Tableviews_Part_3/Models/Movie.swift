@@ -7,60 +7,51 @@
 
 import Foundation
 
-internal struct Movie {
-    
-    internal var title: String
-    internal var year: Int
-    internal var genre: String
-    internal var cast: [Actor]
-    internal var locations: [String]
-    internal var summary: String
-    internal var poster: String
-    
-    init(from data: [String : Any]) {
-        // 1. Start by getting our property values and casting them..
-        //    hint: use if let statements to check for values and cast them
-        if let movieTitle: String = data["name"] as? String,
-            let movieYear: Int = data["year"] as? Int,
-            let movieGenre: String = data["genre"] as? String,
-            let movieLocations: [String] = data["locations"] as? [String],
-            let movieSynopsis: String = data["description"] as? String,
-            let poster: String = data["poster"] as? String {
-            
-            self.title = movieTitle
-            self.year = movieYear
-            self.genre = movieGenre
-            self.locations = movieLocations
-            self.summary = movieSynopsis
-            self.poster = poster
-            
-            if let allActorNames: [String] = data["cast"] as? [String] {
-                var castContainer: [Actor] = []
-                
-                for actorName in allActorNames {
-                    castContainer.append(Actor(from: actorName))
-                    
-                }
-                
-                self.cast = castContainer
-            }
-            else {
-                self.cast = []
-            }
-        }
+import Foundation
 
-        else {
-            self = Movie()
-        }
-    }
-    
-    init() {
-        self.title = ""
-        self.year = 1970
-        self.genre = ""
-        self.cast = []
-        self.locations = []
-        self.summary = ""
-        self.poster = ""
-    }
- }
+class Movie {
+	
+	var title: String
+	var year: Int
+	var genre: String
+	var cast: [String]
+	var locations: [String]
+	var summary: String
+	var poster: String
+	
+	init(title: String, year: Int, genre: String, cast: [String], locations: [String], summary: String, poster: String) {
+		self.title = title
+		self.year = year
+		self.genre = genre
+		self.cast = cast
+		self.locations = locations
+		self.summary = summary
+		self.poster = poster
+	}
+	
+	convenience init(from dict: [String : Any]) {
+		if let movieTitle = dict["name"] as? String,
+			let movieYear = dict["year"] as? Int,
+			let movieGenre = dict["genre"] as? String,
+			let movieCast = dict["cast"] as? [String],
+			let movieLocations = dict["locations"] as? [String],
+			let movieSummary = dict["description"] as? String,
+			let moviePoster = dict["poster"] as? String {
+			
+			self.init(title: movieTitle, year: movieYear, genre: movieGenre, cast: movieCast, locations: movieLocations, summary: movieSummary, poster: moviePoster)
+		}
+		else {
+			self.init()
+		}
+	}
+	
+	init() {
+		self.title = ""
+		self.year = 1970
+		self.genre = ""
+		self.cast = []
+		self.locations = []
+		self.summary = ""
+		self.poster = ""
+	}
+}
