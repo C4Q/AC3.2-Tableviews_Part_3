@@ -16,7 +16,9 @@
 ---
 ###Vocabulary
 
-> TODO
+1. `titleForHeader` - shorthand for `tableView(_:,titleForHeaderInSection:)`
+2. **Enumeration** - An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code. ([Apple](https://itun.es/us/jEUH0.l))
+3. **Extension** - Extensions add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code. ([Apple](https://itun.es/us/jEUH0.l))
 
 ---
 ### 0. Objectives
@@ -131,7 +133,9 @@ override func tableView(_ tableView: UITableView, titleForHeaderInSection sectio
 
 <img src="./Images/alternating_section_headers.png" width="400" alt="Section per movie">
 
-#### Exercise
+### 3. Exercises
+
+> Note: These exercises do no have accompanying tests
 
 We're going to want to make it obvious to our users that Movies are being sorted by their genre, so our goal is to organize each section by a specific header that corresponds to the type of movie in that section. To help you out, here are a few things you'll need:
 
@@ -162,25 +166,20 @@ You're going to want to use the <code>filter</code> function on <code>self.movie
 > Refer to the `/Exercises` folder to see the answer to this question
 
 ---
-### 3. Exercises
+### 4. UI Exercises
 
-While Reel Good's Lead Designer loved that you were able to match their specs exactly, they're not entirely sure they love their original design and want you to make two more types of cells that they can test. They've sent over some screenshots of their design mock ups and have asked you to recreate:
+While Reel Good's Lead Designer loved that you were able to match their specs exactly, they're not entirely sure they love their original design and want you to make one more type of cell that they can test. They've sent over some screenshots of their design mock ups and have asked you to recreate:
 
-#### Alternative Version 1
+#### Alternative Version
 <img src="./Images/alt_version_1_storyboard.png" width="400" alt="Alt Version 1 Mock Up 1">
 <img src="./Images/alt_version_1_simulator.png" width="400" alt="Alt Version 1 Portrait">
 
----
-
-#### Alternative Version 2
-<img src="./Images/alt_version_2_storyboard.png" width="400" alt="Alt Version 2 Mock Up">
-<img src="./Images/alt_version_2_simulator.png" width="400" alt="Alt Version 2 Portrait">
-
-For each of these, you will need to reproduce many of the same steps in creating the first two prototype cells. How you display them in your final product is up to you, but one way would be to display some sections using the alt cell 1 version, and other sections the alt cell 2 version.
+You will need to reproduce many of the same steps in creating the first two prototype cells
 
 #### (Optional, but fun) Adding in new fonts!
 
 If you haven't already done so, take a look at part 2's [Extra Adding Custom Fonts](https://github.com/C4Q/AC3.2-Tableviews_Part_2#5-extra-adding-custom-fonts). It's a good exercise in getting used to the `xcodeproj` in general and it'll give your project a little more visual flair
+
 
 #### Advanced:
 

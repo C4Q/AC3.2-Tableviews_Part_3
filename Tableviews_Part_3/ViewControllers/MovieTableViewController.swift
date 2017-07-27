@@ -15,9 +15,8 @@ class MovieTableViewController: UITableViewController {
 	var movieData: [Movie]!
 	let cellIdentifier: String = "MovieTableViewCell"
 	let cellIdentifierRightAligned: String = "MovieRightAlignedTableViewCell"
-	
 	let cellIdentifierAlt1Cell = "Alt1TableViewCell"
-	let cellIdentifierAlt2Cell = "Alt2TableViewCell"
+
 	
 	let reelGoodGreen: UIColor = UIColor(red: 109.0/255.0, green: 199.0/255.0, blue: 39.0/255.0, alpha: 1.0)
 	let reelGoodGray: UIColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1.0)
@@ -71,9 +70,9 @@ class MovieTableViewController: UITableViewController {
 		
 		var identifier: String = ""
 		switch indexPath.row {
-		case 0: identifier = cellIdentifierRightAligned
-		case 1: identifier = cellIdentifierAlt1Cell
-		default: identifier = cellIdentifierAlt2Cell
+		case 0: identifier = cellIdentifier
+		case 1: identifier = cellIdentifierRightAligned
+		default: identifier = cellIdentifierAlt1Cell
 		}
 
 		let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
@@ -107,14 +106,10 @@ class MovieTableViewController: UITableViewController {
 			movieAlt1Cell.movieSummaryLabel.text = cellMovie.summary
 			movieAlt1Cell.moviePosterImageView.image = UIImage(named: cellMovie.poster)
 			movieAlt1Cell.movieYearLabel.text = "\(cellMovie.year)"
+			
+			movieAlt1Cell.dividerView.backgroundColor = reelGoodGreen
 		}
-		else if let movieAlt2Cell = cell as? Alt2TableViewCell {
-			movieAlt2Cell.movieTitleLabel.text = cellMovie.title
-			movieAlt2Cell.movieSummaryLabel.text = cellMovie.summary
-			movieAlt2Cell.moviePosterImageView.image = UIImage(named: cellMovie.poster)
-			movieAlt2Cell.movieCastLabel.text = "\(cellMovie.cast)"
-		}
-		
+
 		return cell
 	}
 	
