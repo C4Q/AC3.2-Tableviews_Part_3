@@ -22,7 +22,6 @@
 		148B22641D99BCB500A04A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148B22631D99BCB500A04A6F /* Assets.xcassets */; };
 		14F98B651F2A856600EC2CFB /* Tableviews_Part_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F98B641F2A856600EC2CFB /* Tableviews_Part_3Tests.swift */; };
 		14FFF7881F2A4617009C9664 /* MovieRightAlignedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFF7871F2A4617009C9664 /* MovieRightAlignedTableViewCell.swift */; };
-		14FFF78A1F2A497C009C9664 /* Alt1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFF7891F2A497C009C9664 /* Alt1TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		14F98B641F2A856600EC2CFB /* Tableviews_Part_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tableviews_Part_3Tests.swift; sourceTree = "<group>"; };
 		14F98B661F2A856600EC2CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14FFF7871F2A4617009C9664 /* MovieRightAlignedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieRightAlignedTableViewCell.swift; path = Tableviews_Part_3/Views/MovieRightAlignedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		14FFF7891F2A497C009C9664 /* Alt1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alt1TableViewCell.swift; path = Tableviews_Part_3/Views/Alt1TableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,6 @@
 			children = (
 				148B21F51D99BC0E00A04A6F /* MovieTableViewCell.swift */,
 				14FFF7871F2A4617009C9664 /* MovieRightAlignedTableViewCell.swift */,
-				14FFF7891F2A497C009C9664 /* Alt1TableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -296,7 +293,6 @@
 				148B22091D99BC7800A04A6F /* Data.swift in Sources */,
 				148B21F61D99BC0E00A04A6F /* MovieTableViewCell.swift in Sources */,
 				148B22081D99BC7800A04A6F /* Actor.swift in Sources */,
-				14FFF78A1F2A497C009C9664 /* Alt1TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +534,7 @@
 				14F98B6B1F2A856600EC2CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
